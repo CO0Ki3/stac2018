@@ -27,9 +27,6 @@ void loop(){
   GyZ=Wire.read()<<8|Wire.read();  // 0x47 (GYRO_ZOUT_H) & 0x48 (GYRO_ZOUT_L)
   
   //시리얼 모니터에 출력
-  Serial.println(AcX*AcX);
-  Serial.println(AcY*AcY);
-  Serial.println(AcZ*AcZ);
-  Serial.println();
+  Serial.println(sqrt(AcX*AcX+AcY*AcY+AcZ*AcZ));
   delay(666);
 }
